@@ -1,0 +1,12 @@
+
+<div class="profile-page">
+	<div class="profile-container" *ngIf="user; else loading">
+		<h2 style="margin-top:6px;color:#7c3aed;">Welcome, {{ user.username }}!</h2>
+		<p>Email: {{ user.email }}</p>
+		<p>ID: {{ user.id }}</p>
+		<button (click)="logout()">Logout</button>
+	</div>
+	<ng-template #loading>
+		<p>Loading profile...</p>
+	</ng-template>
+</div>
